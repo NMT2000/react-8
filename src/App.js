@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header/Header'
+import Sidebar from './components/Sidebar/Sidebar'
+import Feed from './components/Feed/Feed'
+import Widget from './components/Widget/Widget'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header />
+        <div className="app__body">
+          <Sidebar />
+          <Feed />
+          <Widget />
+        </div>
+        <div className="btn__messerger">
+          <button className="btn__messerger--icon">
+            <i class='bx bx-edit'></i>
+          </button>
+        </div>
     </div>
   );
 }
